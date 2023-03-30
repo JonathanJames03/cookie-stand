@@ -5,7 +5,7 @@ function getRandom(max, min) {
 
 }
 
-const seattle = {
+/*const seattle = {
     min: 23,
     max: 65,
     avg: 6.3,
@@ -182,4 +182,85 @@ const lima = {
     }
     
 }
-lima.showit();
+lima.showit();*/
+
+let hoursOfOperation = ["6am", "7am", "8am", "9am", "10am", "11am", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm", "6pm", "7pm"];
+
+function cookieStandLocation(min, max, avg, location) {
+    let stand = {};
+    stand.min = min;
+    stand.max = max;
+    stand.avg = avg;
+    stand.location = location;
+    stand.cookiesPerHour = [];
+    stand.getCustomers = function() {
+     return getRandom(this.max, this.min);
+    }
+    let sum = 0
+ 
+    stand.getCookies = function getCookies() {
+         for(let i = 0; i < this.hoursOfOperation.length; i++) {
+          this.cookiesPerHour.push(Math.ceil(this.avg * this.getCustomers()));
+         }
+         return this.cookiesPerHour;
+     }
+ 
+     stand.tableFiller = function() {
+        let cookiesTable = document.querySelector('.CookieData');
+        let hoursTable = document.querySelectorAll('.Hoursofopp');
+        let locationTable = document.createElement('tr');
+        let locationData = document.createElement('td');
+        let sumData = document.createElement('td');
+        locationData.innerHTML += this.Location
+        locationTable.append(locationData);
+        stand.totalNumber = function() {
+            
+            
+            for(let i=0; i < this.cookiesPerHour.length; i++) {
+                sum += this.cookiesPerHour[i];
+            }
+            return sum;
+        }
+        sumData.innerHTML += this.totalNumber()
+        for (let i = 0; i< hoursOpen.length; i++) {
+            let tableData = document.createElement('td')
+            tableData.innerHTML += this.cookiesPerHour[i]
+            cookiesTable.append(tableData);
+            locationTable.append(tableData);0
+          }  
+          locationTable.append(sumData);
+        cookiesTable.append(locationTable);
+        
+        }
+        return stand
+    }
+ 
+    let seattleF = new cookieStandLocation(23,65,6.3,'Seattle')      
+    seattleF.getCookies();
+    seattleF.customersPerHour();
+    
+    seattleF.tableFiller();
+    
+    let tokyoF = new cookieStandLocation(3,24,1.2,'Tokyo')
+    tokyoF.getCookies();
+    tokyoF.customersPerHour();
+    
+    tokyoF.tableFiller();
+    
+    let dubaiF = new cookieStandLocation(11,38,3.7,'Dubai')
+    dubaiF.getCookies();
+    dubaiF.customersPerHour();
+    
+    dubaiF.tableFiller();
+    
+    let parisF = new cookieStandLocation(20,38,2.3,'Paris')
+    parisF.getCookies();
+    parisF.customersPerHour();
+    
+     parisF.tableFiller();
+    
+    let limaF = new cookieStandLocation(2,16,4.2,'Lima')
+    limaF.getCookies();
+    limaF.customersPerHour();
+    
+     limaF.tableFiller();
