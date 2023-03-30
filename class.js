@@ -25,15 +25,19 @@ const seattle = {
         }
         return this.cookiesPerHour;
     },
-}
-let hoursDemo = ["6am", "7am", "8am", "9am", "10am", "11am", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm", "6pm", "7pm"];
-let cookieDemo = [152,265,202,353,227,221,202,378,171,309,215,189,189,385];
-let hoursArray = document.querySelector('.output')
-for(let i = 0; i < hoursDemo.length; i++) {
-    let variable = document.createElement("li");
-    variable.innerHTML = `${hoursDemo[i]}: ${cookieDemo[i]} cookies`;
-    hoursArray.append(variable);
-}
+
+    showit: function() {
+        this.getCookies(); 
+        let hoursArray = document.querySelector('.Seattle-output')
+         for(let i = 0; i < this.hoursOfOperation.length; i++) { 
+         let variable = document.createElement('li');
+         variable.innerHTML = `${this.hoursOfOperation[i]}: ${this.cookiesPerHour[i]} cookies`           
+         hoursArray.append(variable);
+              }
+          }
+        
+     }
+seattle.showit();
 
 
 
@@ -58,15 +62,18 @@ const tokyo = {
         }
         return this.cookiesPerHour;
     },
+    showit: function() {
+        this.getCookies(); 
+       let hoursArray = document.querySelector('.Tokyo-output')
+        for(let i = 0; i < this.hoursOfOperation.length; i++) { 
+        let variable = document.createElement('li');
+        variable.innerHTML = `${this.hoursOfOperation[i]}: ${this.cookiesPerHour[i]} cookies`;
+       hoursArray.append(variable);
+        }
+    }
+    
 }
-let hoursDemo2 = ["6am", "7am", "8am", "9am", "10am", "11am", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm", "6pm", "7pm"];
-let cookieDemo2 = [152,265,202,353,227,221,202,378,171,309,215,189,189,385];
-let hoursArray2 = document.querySelector('.output')
-for(let i = 0; i < hoursDemo.length; i++) {
-    let variable = document.createElement("li");
-    variable.innerHTML = `${hoursDemo[i]}: ${cookieDemo[i]} cookies`;
-    hoursArray.append(variable);
-}
+tokyo.showit();
 
 
 
@@ -91,16 +98,18 @@ const dubai = {
         }
         return this.cookiesPerHour;
     },
-}
-let hoursDemo3 = ["6am", "7am", "8am", "9am", "10am", "11am", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm", "6pm", "7pm"];
-let cookieDemo3 = [152,265,202,353,227,221,202,378,171,309,215,189,189,385];
-let hoursArray3 = document.querySelector('.output')
-for(let i = 0; i < hoursDemo.length; i++) {
-    let variable = document.createElement("li");
-    variable.innerHTML = `${hoursDemo[i]}: ${cookieDemo[i]} cookies`;
-    hoursArray.append(variable);
-}
-
+    showit: function() {
+            this.getCookies(); 
+           let hoursArray = document.querySelector('.Dubai-output')
+            for(let i = 0; i < this.hoursOfOperation.length; i++) { 
+            let variable = document.createElement('li');
+            variable.innerHTML = `${this.hoursOfOperation[i]}: ${this.cookiesPerHour[i]} cookies`;
+           hoursArray.append(variable);
+            }
+        }
+        
+    }
+ dubai.showit();
 
 
 
@@ -125,15 +134,18 @@ const paris = {
         }
         return this.cookiesPerHour;
     },
+    showit: function() {
+        this.getCookies(); 
+       let hoursArray = document.querySelector('.Paris-output')
+        for(let i = 0; i < this.hoursOfOperation.length; i++) { 
+        let variable = document.createElement('li');
+        variable.innerHTML = `${this.hoursOfOperation[i]}: ${this.cookiesPerHour[i]} cookies`;
+       hoursArray.append(variable);
+        }
+    }
+    
 }
-let hoursDemo4 = ["6am", "7am", "8am", "9am", "10am", "11am", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm", "6pm", "7pm"];
-let cookieDemo4 = [152,265,202,353,227,221,202,378,171,309,215,189,189,385];
-let hoursArray4 = document.querySelector('.output')
-for(let i = 0; i < hoursDemo.length; i++) {
-    let variable = document.createElement("li");
-    variable.innerHTML = `${hoursDemo[i]}: ${cookieDemo[i]} cookies`;
-    hoursArray.append(variable);
-}
+paris.showit();
 
 
 
@@ -159,13 +171,15 @@ const lima = {
         }
         return this.cookiesPerHour;
     },
+    showit: function() {
+        this.getCookies(); 
+       let hoursArray = document.querySelector('.Lima-output')
+        for(let i = 0; i < this.hoursOfOperation.length; i++) { 
+        let variable = document.createElement('li');
+        variable.innerHTML = `${this.hoursOfOperation[i]}: ${this.cookiesPerHour[i]} cookies`;
+       hoursArray.append(variable);
+        }
+    }
+    
 }
-
-let hoursDemo5 = ["6am", "7am", "8am", "9am", "10am", "11am", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm", "6pm", "7pm"];
-let cookieDemo5 = [152,265,202,353,227,221,202,378,171,309,215,189,189,385];
-let hoursArray5 = document.querySelector('.output')
-for(let i = 0; i < hoursDemo.length; i++) {
-    let variable = document.createElement("li");
-    variable.innerHTML = `${hoursDemo[i]}: ${cookieDemo[i]} cookies`;
-    hoursArray.append(variable);
-}
+lima.showit();
