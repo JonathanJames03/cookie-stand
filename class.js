@@ -196,7 +196,7 @@ function cookieStandLocation(min, max, avg, location) {
     stand.getCustomers = function() {
      return getRandom(this.max, this.min);
     }
-    let sum = 0
+    let sum = 0;
  
     stand.getCookies = function getCookies() {
          for(let i = 0; i < this.hoursOfOperation.length; i++) {
@@ -235,32 +235,34 @@ function cookieStandLocation(min, max, avg, location) {
         return stand
     }
  
-    let seattleF = new cookieStandLocation(23,65,6.3,'Seattle')      
-    seattleF.getCookies();
-    seattleF.customersPerHour();
+    let seattle = new cookieStandLocation(23,65,6.3,'Seattle')      
+    seattle.getCookies();
+    seattle.customersPerHour();
     
-    seattleF.tableFiller();
+    seattle.tableFiller();
     
-    let tokyoF = new cookieStandLocation(3,24,1.2,'Tokyo')
-    tokyoF.getCookies();
-    tokyoF.customersPerHour();
+    let tokyo = new cookieStandLocation(3,24,1.2,'Tokyo')
+    tokyo.getCookies();
+    tokyo.customersPerHour();
     
-    tokyoF.tableFiller();
+    tokyo.tableFiller();
     
-    let dubaiF = new cookieStandLocation(11,38,3.7,'Dubai')
-    dubaiF.getCookies();
-    dubaiF.customersPerHour();
+    let dubai = new cookieStandLocation(11,38,3.7,'Dubai')
+    dubai.getCookies();
+    dubai.customersPerHour();
     
-    dubaiF.tableFiller();
+    dubai.tableFiller();
+
+    let paris = new cookieStandLocation(20,38,2.3,'Paris')
+    paris.getCookies();
+    paris.customersPerHour();
     
-    let parisF = new cookieStandLocation(20,38,2.3,'Paris')
-    parisF.getCookies();
-    parisF.customersPerHour();
+     paris.tableFiller();
     
-     parisF.tableFiller();
+    let lima = new cookieStandLocation(2,16,4.2,'Lima')
+    lima.getCookies();
+    lima.customersPerHour();
     
-    let limaF = new cookieStandLocation(2,16,4.2,'Lima')
-    limaF.getCookies();
-    limaF.customersPerHour();
-    
-     limaF.tableFiller();
+     lima.tableFiller();
+
+     
