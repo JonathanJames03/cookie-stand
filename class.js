@@ -205,7 +205,7 @@ function cookieStandLocation(min, max, avg, location) {
          return this.cookiesPerHour;
      }
  
-     stand.tableFiller = function() {
+     stand.render = function() {
         let cookiesTable = document.querySelector('.CookieData');
         let hoursTable = document.querySelectorAll('.Hoursofopp');
         let locationTable = document.createElement('tr');
@@ -232,35 +232,30 @@ function cookieStandLocation(min, max, avg, location) {
         cookiesTable.append(locationTable);
         
         }
-        return stand
+        return stand;
     }
  
-    let seattleF = new cookieStandLocation(23,65,6.3,'Seattle')      
-    seattleF.getCookies();
-    seattleF.customersPerHour();
+    let seattle = new cookieStandLocation(23,65,6.3,'Seattle',[])      
+    seattle.getCookies();
+    seattle.customersPerHour();
+    seattle.render();
     
-    seattleF.tableFiller();
+    let tokyo = new cookieStandLocation(3,24,1.2,'Tokyo',[])
+    tokyo.getCookies();
+    tokyo.customersPerHour();
+    tokyo.render();
     
-    let tokyoF = new cookieStandLocation(3,24,1.2,'Tokyo')
-    tokyoF.getCookies();
-    tokyoF.customersPerHour();
+    let dubai = new cookieStandLocation(11,38,3.7,'Dubai',[])
+    dubai.getCookies();
+    dubai.customersPerHour();
+    dubai.render();
     
-    tokyoF.tableFiller();
+    let paris = new cookieStandLocation(20,38,2.3,'Paris',[])
+    paris.getCookies();
+    paris.customersPerHour();
+    paris.render();
     
-    let dubaiF = new cookieStandLocation(11,38,3.7,'Dubai')
-    dubaiF.getCookies();
-    dubaiF.customersPerHour();
-    
-    dubaiF.tableFiller();
-    
-    let parisF = new cookieStandLocation(20,38,2.3,'Paris')
-    parisF.getCookies();
-    parisF.customersPerHour();
-    
-     parisF.tableFiller();
-    
-    let limaF = new cookieStandLocation(2,16,4.2,'Lima')
-    limaF.getCookies();
-    limaF.customersPerHour();
-    
-     limaF.tableFiller();
+    let lima = new cookieStandLocation(2,16,4.2,'Lima',[])
+    lima.getCookies();
+    lima.customersPerHour();
+    lima.render();
