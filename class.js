@@ -235,22 +235,22 @@ function cookieStandLocation(min, max, avg, location) {
         return stand;
     }
  
-    let seattle = new cookieStandLocation(23,65,6.3,'Seattle')      
+    let seattle = new cookieStandLocation(23,65,6.3,'Seattle',)      
     seattle.getCookies();
     seattle.customersPerHour();
     seattle.render();
     
-    let tokyo = new cookieStandLocation(3,24,1.2,'Tokyo')
+    let tokyo = new cookieStandLocation(3,24,1.2,'Tokyo',)
     tokyo.getCookies();
     tokyo.customersPerHour();
     tokyo.render();
     
-    let dubai = new cookieStandLocation(11,38,3.7,'Dubai')
+    let dubai = new cookieStandLocation(11,38,3.7,'Dubai',)
     dubai.getCookies();
     dubai.customersPerHour();
     dubai.render();
     
-    let paris = new cookieStandLocation(20,38,2.3,'Paris')
+    let paris = new cookieStandLocation(20,38,2.3,'Paris',)
     paris.getCookies();
     paris.customersPerHour();
     paris.render();
