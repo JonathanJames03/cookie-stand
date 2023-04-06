@@ -235,27 +235,32 @@ function cookieStandLocation(min, max, avg, location) {
         return stand;
     }
  
-    let seattle = new cookieStandLocation(23,65,6.3,'Seattle',)      
-    seattle.getCookies();
-    seattle.customersPerHour();
-    seattle.render();
+    let seattleF = new cookieStandLocation(23,65,6.3,'Seattle')      
+    seattleF.getCookies();
+    seattleF.customersPerHour();
     
-    let tokyo = new cookieStandLocation(3,24,1.2,'Tokyo',)
-    tokyo.getCookies();
-    tokyo.customersPerHour();
-    tokyo.render();
+    seattleF.tableFiller();
     
-    let dubai = new cookieStandLocation(11,38,3.7,'Dubai',)
-    dubai.getCookies();
-    dubai.customersPerHour();
-    dubai.render();
+    let tokyoF = new cookieStandLocation(3,24,1.2,'Tokyo')
+    tokyoF.getCookies();
+    tokyoF.customersPerHour();
     
-    let paris = new cookieStandLocation(20,38,2.3,'Paris',)
-    paris.getCookies();
-    paris.customersPerHour();
-    paris.render();
+    tokyoF.tableFiller();
     
-    let lima = new cookieStandLocation(2,16,4.2,'Lima')
-    lima.getCookies();
-    lima.customersPerHour();
-    lima.render();
+    let dubaiF = new cookieStandLocation(11,38,3.7,'Dubai')
+    dubaiF.getCookies();
+    dubaiF.customersPerHour();
+    
+    dubaiF.tableFiller();
+    
+    let parisF = new cookieStandLocation(20,38,2.3,'Paris')
+    parisF.getCookies();
+    parisF.customersPerHour();
+    
+     parisF.tableFiller();
+    
+    let limaF = new cookieStandLocation(2,16,4.2,'Lima')
+    limaF.getCookies();
+    limaF.customersPerHour();
+    
+     limaF.tableFiller();
